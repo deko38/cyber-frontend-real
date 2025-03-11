@@ -1,12 +1,15 @@
-import { useState } from 'react'
+
+import Navbar from "./components/Navbar.jsx";
 
 
 function App() {
-  const [message, setMessage] = useState("app")
+
 
   return (
     <>
-<p>{message}</p>
+      <Navbar></Navbar>
+
+
 
     </>
   )
