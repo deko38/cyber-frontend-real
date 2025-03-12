@@ -29,7 +29,7 @@ function Navbar() {
                     cyber
                 </div>
 
-                {/* The search input and menu items inside the hamburger menu */}
+
                 {menus ? (
                     <div className={`${classes['elements']} ${menuOpen ? classes.active : ''}`}>
                         <input placeholder='search' type='text' className={classes['input']} />
@@ -38,7 +38,7 @@ function Navbar() {
                         <p>{menus.contactUs ? menus.contactUs.name : ""}</p>
                         <p>{menus.blog ? menus.blog.name : ""}</p>
 
-                        {/* Icons only visible inside the mobile menu */}
+
                         <div className={classes['icons']}>
                             <img src={cart} className={`${classes['icon']} ${classes['small-icon']}`} />
                             <img src={heart} className={`${classes['icon']} ${classes['small-icon']}`} />
@@ -47,9 +47,9 @@ function Navbar() {
                     </div>
                 ) : ""}
 
-                {/* Hamburger menu icon for mobile */}
+
                 <div className={classes['hamburger']} onClick={() => setMenuOpen(!menuOpen)}>
-                    {menuOpen ? '×' : '☰'} {/* Change to 'X' when open */}
+                    {menuOpen ? '×' : '☰'}
                 </div>
             </div>
         </>
