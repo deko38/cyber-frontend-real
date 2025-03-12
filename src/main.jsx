@@ -1,10 +1,17 @@
 
 import { createRoot } from 'react-dom/client'
 import './reset.css'
-import App from './App.jsx'
+import Home from './pages/Home.jsx'
+import {BrowserRouter, Routes} from "react-router";
 
 createRoot(document.getElementById('root')).render(
 
-    <App />
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    </BrowserRouter>
 
 )

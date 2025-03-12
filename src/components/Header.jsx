@@ -1,16 +1,16 @@
-import classes from '../module/Navbar.module.css';
+import classes from '../module/Navbar.module.scss';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import cart from '../assets/Icon/cart.png';
 import person from '../assets/Icon/person.png';
 import heart from '../assets/Icon/heart.png';
 
-function Navbar() {
+function Header() {
     const [menus, setMenus] = useState({});
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/menus")
+        axios.get("http://localhost:5000/menus/navbar")
             .then(response => {
                 console.log("Fetched menus:", response.data);
                 setMenus(response.data[0]);
@@ -56,4 +56,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Header;
